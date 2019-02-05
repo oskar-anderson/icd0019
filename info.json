@@ -1,8 +1,7 @@
 {
   "firstName": "Karl Oskar",
   "lastName": "Anderson",
-  "passwordHash": "fb851ac82606bf77b34d88b4cfa184a9573d0abc39f62530b07ac7647945cc33",
+  "passwordHash": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
   "formOfStudy": "S",
-  "iHaveReadTheRulesOfTheCourse": false
+  "iHaveReadTheRulesOfTheCourse": true
 }
-
