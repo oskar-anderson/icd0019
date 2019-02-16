@@ -50,17 +50,17 @@ public class Code {
     }
 
     public static String asString(Integer[] elements) {
-        String number_string = "";
+        String numberString = "";
         int index = 0;
         for (Integer element : elements) {
             if (index != elements.length - 1) {
-                number_string += element + ", ";
+                numberString += element + ", ";
             }    else {
-                number_string += element;
+                numberString += element;
             }
             index += 1;
         }
-        return number_string;
+        return numberString;
     }
 
     public static String squareDigits(String s) {
