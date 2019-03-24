@@ -16,7 +16,7 @@ import static org.junit.Assert.assertTrue;
 public class SimulatorTests {
 
     @Test
-    public void testPair() {
+    public void onePair() {
         Hand hand = new Hand();
 
         hand.addCard(new Card(s7, C));
@@ -78,11 +78,7 @@ public class SimulatorTests {
                 new Card(Q, S),
                 new Card(A, C));
 
-        System.out.println(cards);
-
         Collections.sort(cards);
-
-        System.out.println(cards);
 
         assertThat(cards.toString(),
                 is("[(J, H), (Q, H), (Q, S), (K, H), (A, C)]"));

@@ -1,15 +1,12 @@
 package collections.simulator;
 
 import java.util.*;
-import static collections.simulator.Card.CardSuit.*;
-import static collections.simulator.Card.CardValue.*;
 import static collections.simulator.HandType.*;
 
 public class Simulator {
 
-    private ArrayList<ArrayList> deck;
     private Map<HandType, Integer> frequencyMap;
-    private int numberOfSimulations = 100000;
+    private int numberOfSimulations = 500000;
 
     public Simulator() {
 
@@ -23,16 +20,16 @@ public class Simulator {
         for (int outerCycle = 0; outerCycle < numberOfSimulations; outerCycle++) {
             Hand hand = new Hand();
 
-            this.deck = createDeck();
-            Collections.shuffle(this.deck);
+            ArrayList<ArrayList> deck = createDeck();
+            Collections.shuffle(deck);
 
             // System.out.println(this.deck.get(0).get(0).getClass());  // class collections.simulator.Card$CardValue
             // System.out.println(this.deck.get(0).get(1).getClass());  // class collections.simulator.Card$CardSuit
             // Card.CardValue value = (Card.CardValue) this.deck.get(i).get(0); // Why does it turn into an object and needs to be casted?
 
             for (int i = 0; i < 5; i++) {
-                Card.CardValue value = (Card.CardValue) this.deck.get(i).get(0);
-                Card.CardSuit suit = (Card.CardSuit) this.deck.get(i).get(1);
+                Card.CardValue value = (Card.CardValue) deck.get(i).get(0);
+                Card.CardSuit suit = (Card.CardSuit) deck.get(i).get(1);
                 hand.addCard(new Card(value, suit));
             }
 
@@ -46,7 +43,7 @@ public class Simulator {
                 frequencyMap.put(TWO_PAIRS, frequencyMap.get(TWO_PAIRS) + 1);
             }
         }
-        System.out.println(frequencyMap + " with " + numberOfSimulations + " cicles.");
+        // System.out.println(frequencyMap + " with " + numberOfSimulations + " iterations.");
     }
 
     public Map<HandType, Double> calculateProbabilities() {
@@ -54,7 +51,7 @@ public class Simulator {
         for (HandType handValue : frequencyMap.keySet()) {
             probabilityMap.put(handValue, (double) frequencyMap.get(handValue) * 100 / numberOfSimulations);
         }
-        System.out.println(probabilityMap);
+        // System.out.println(probabilityMap);
         return probabilityMap;
     }
 
