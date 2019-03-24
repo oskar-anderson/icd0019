@@ -6,7 +6,7 @@ import static collections.simulator.HandType.*;
 public class Simulator {
 
     private Map<HandType, Integer> frequencyMap;
-    private int numberOfSimulations = 60000;
+    private int numberOfSimulations = 65000;
 
     public Simulator() {
 
