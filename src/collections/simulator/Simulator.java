@@ -9,7 +9,7 @@ public class Simulator {
 
     private ArrayList<ArrayList> deck;
     private Map<HandType, Integer> frequencyMap;
-    private int numberOfSimulations = 1000000;
+    private int numberOfSimulations = 100000;
 
     public Simulator() {
 
