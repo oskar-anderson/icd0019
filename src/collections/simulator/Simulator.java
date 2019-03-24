@@ -37,12 +37,12 @@ public class Simulator {
 
             if (hand.isOnePair()) {
                 frequencyMap.put(PAIR, frequencyMap.get(PAIR) + 1);
-            } if (hand.isTrips()) {
+            } else if (hand.isTrips()) {
                 frequencyMap.put(THREE_OF_A_KIND, frequencyMap.get(THREE_OF_A_KIND) + 1);
-            } if (hand.isFullHouse()) {
-                frequencyMap.put(FULL_HOUSE, frequencyMap.get(FULL_HOUSE) + 1);
-            } if (hand.isTwoPairs()) {
+            } else if (hand.isTwoPairs()) {
                 frequencyMap.put(TWO_PAIRS, frequencyMap.get(TWO_PAIRS) + 1);
+            } else if (hand.isFullHouse()) {
+                frequencyMap.put(FULL_HOUSE, frequencyMap.get(FULL_HOUSE) + 1);
             }
         }
         // System.out.println(frequencyMap + " with " + numberOfSimulations + " iterations.");
