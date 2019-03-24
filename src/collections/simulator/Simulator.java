@@ -2,11 +2,13 @@ package collections.simulator;
 
 import java.util.*;
 import static collections.simulator.HandType.*;
+import org.apache.commons.lang3.SerializationUtils;
+
 
 public class Simulator {
 
     private Map<HandType, Integer> frequencyMap;
-    private int numberOfSimulations = 65000;
+    private int numberOfSimulations = 700000;
 
     public Simulator() {
 
