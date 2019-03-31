@@ -19,6 +19,7 @@ public class ShoppingCart<T extends CartItem> {
                 toRemove.add(item);
             }
         }
+
         cart.removeAll(toRemove);
     }
 
