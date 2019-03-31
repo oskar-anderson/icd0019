@@ -2,7 +2,6 @@ package collections.simulator;
 
 import java.util.*;
 import static collections.simulator.HandType.*;
-import org.apache.commons.lang3.SerializationUtils;
 
 
 public class Simulator {
@@ -25,9 +24,9 @@ public class Simulator {
             ArrayList<ArrayList> deck = createDeck();
             Collections.shuffle(deck);
 
-            // System.out.println(this.deck.get(0).get(0).getClass());  // class collections.simulator.Card$CardValue
-            // System.out.println(this.deck.get(0).get(1).getClass());  // class collections.simulator.Card$CardSuit
-            // Card.CardValue value = (Card.CardValue) this.deck.get(i).get(0); // Why does it turn into an object and needs to be casted?
+            // System.out.println(deck.get(0).get(0).getClass());  // class collections.simulator.Card$CardValue
+            // System.out.println(deck.get(0).get(1).getClass());  // class collections.simulator.Card$CardSuit
+            // Card.CardValue valuetest = (Card.CardValue) deck.get(0).get(0); // Why does it turn into an object and needs to be casted?
 
             for (int i = 0; i < 5; i++) {
                 Card.CardValue value = (Card.CardValue) deck.get(i).get(0);

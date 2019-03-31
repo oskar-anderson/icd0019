@@ -17,6 +17,14 @@ public class Code {
         System.out.println(squareDigits("a2b"));
         System.out.println(squareDigits("a22b"));
         System.out.println(squareDigits("a81b4"));
+
+        String element = "el5";
+        String s;
+        s = ""+element.charAt(2);
+        int x = Integer.parseInt(s);
+
+        String abc = "2345";
+        x = abc.charAt(2)- '0';
     }
 
     public static Integer sum(Integer[] numbers) {
@@ -71,6 +79,17 @@ public class Code {
         while (index != s.length()) {
             System.out.println(s.charAt(index));
             if (Character.isDigit(s.charAt(index))) {
+                System.out.println("data type:");
+
+                int cara = s.charAt(index);
+                System.out.println(cara);
+
+                // Character cara = s.charAt(index);
+                // System.out.println(cara.getClass());
+
+                // Character cara = s.charAt(index);
+                // System.out.println(cara.toString());
+
                 int number = Character.getNumericValue(s.charAt(index));
                 result += Math.round(Math.pow(number, 2));
             } else {
