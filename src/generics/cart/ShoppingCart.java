@@ -5,8 +5,8 @@ import java.util.List;
 
 public class ShoppingCart<T extends CartItem> {
 
-    Double totalDiscount = 0.0;
-    ArrayList<T> cart = new ArrayList<>();
+    private Double totalDiscount = 0.0;
+    private ArrayList<T> cart = new ArrayList<>();
 
     public void add(T item) {
         cart.add(item);
@@ -20,10 +20,6 @@ public class ShoppingCart<T extends CartItem> {
             }
         }
         cart.removeAll(toRemove);
-    }
-
-    private boolean containsId(String id) {
-        throw new RuntimeException("not implemented yet");
     }
 
     public Double getTotal() {
