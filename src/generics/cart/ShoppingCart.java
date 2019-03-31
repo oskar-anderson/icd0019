@@ -24,7 +24,7 @@ public class ShoppingCart<T extends CartItem> {
     }
 
     public Double getTotal() {
-        Double total = 0.0;
+        double total = 0.0;
         for (T item : cart) {
             total += (item.getPrice() * (1 - totalDiscount / 100));
         }
