@@ -1,0 +1,11 @@
+REGULAR;c1;Alice;0;2019-03-10
+REGULAR;c2;Bob;0;2019-01-04
+GOLD;c3;Carol;0;
+
+
+
+
+
+
+
+
